@@ -8,7 +8,6 @@ import (
 	"path"
 	"runtime/pprof"
 	"strings"
-	"time"
 
 	. "github.com/antonmedv/fx/pkg/dict"
 	. "github.com/antonmedv/fx/pkg/json"
@@ -155,7 +154,7 @@ func main() {
 
 	// TODO: delete after tea can reopen stdin.
 	// https://github.com/charmbracelet/bubbletea/issues/302
-	time.Sleep(100 * time.Millisecond)
+	// time.Sleep(100 * time.Millisecond)
 
 	p := tea.NewProgram(m, tea.WithAltScreen(), tea.WithMouseCellMotion())
 	if err := p.Start(); err != nil {
